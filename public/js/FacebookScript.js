@@ -71,5 +71,5 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-	 window.location.href = 'index.html';
+	 window.location.href = 'HomePage.html';
   }
