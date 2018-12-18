@@ -31,14 +31,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.get('/', function(req, res) {
-    res.render('LoginPage.html');
+    res.render('LoginPage');
 })
 
 app.post('/enroll', function (req, res) {
     MongoClient.connect(url, function(err, client) {
         if(err)
         {
-            res.write("Failed, Error while cosnnecting to Database");
+            res.write("Failed, Error while connecting to Database");
             res.end();
         }
         var db= client.db();
@@ -46,7 +46,7 @@ app.post('/enroll', function (req, res) {
             from: 'Pallavi <s.pallavidesai@gmail.com>',
             to:req.body.username,
             subject: 'Welcome User!!!',
-            text: 'You have been succesfully Registered'
+            text: 'You have been successfully Registered'
         }
         transporter.sendMail(mailOptions, function (err, res) {
             if(err)
@@ -72,7 +72,7 @@ app.get('/getpwd', function (req, res){
     MongoClient.connect(url, function(err, db) {
         if(err)
         {
-            res.write("Failed, Error while cosnnecting to Database");
+            res.write("Failed, Error while connecting to Database");
             res.end();
         }
         if (err) throw err;
