@@ -241,7 +241,7 @@ myapp.controller('MongoRestController',function($scope,$http,$window){
                             console.log("here " + data);
                             $scope.finalMsg = "Registration Successful";
                             alert("You have been successfully Registered");
-                            $window.location.href = 'LoginPage.html';
+                            $window.location.href = 'index.html';
                         });
                         req.error(function (data, status, headers, config) {
                             // alert( "failure message: " + JSON.stringify({data: data}));

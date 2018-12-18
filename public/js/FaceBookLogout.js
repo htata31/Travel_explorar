@@ -27,7 +27,7 @@ function signOut() {
           auth2.signOut().then(function () {
               console.log('User signed out.');
               localStorage.setItem("oauth","loggedout");
-              window.location.href = 'LoginPage.html';
+              window.location.href = 'index.html';
           });
       }
       else if (oauth_value== "fb")
@@ -36,7 +36,7 @@ function signOut() {
       }
       else
       {
-          window.location.href = 'LoginPage.html';
+          window.location.href = 'index.html';
       }
 
   } 
@@ -55,7 +55,7 @@ function signOut() {
                 FB.logout(function(response) {
                     // this part just clears the $_SESSION var
                     // replace with your own code
-                    window.location.href = 'LoginPage.html';
+                    window.location.href = 'index.html';
                     });
                 }
             });
